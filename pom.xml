@@ -92,6 +92,11 @@
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>com.graphql-java</groupId>
+                <artifactId>graphql-java</artifactId>
+                <version>2019-08-28T11-47-05-b9487a9</version>
+            </dependency>
             <!--mall通用模块-->
             <dependency>
                 <groupId>com.macro.mall</groupId>

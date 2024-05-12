@@ -18,6 +18,18 @@
 
     <dependencies>
         <dependency>
+            <groupId>com.petra.graphqlify</groupId>
+            <artifactId>graphqlify-java-processor-engine</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>com.petra.graphqlify</groupId>
+            <artifactId>graphqlify-java-springweb-plugin</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
             <groupId>com.macro.mall</groupId>
             <artifactId>mall-mbg</artifactId>
         </dependency>
@@ -43,6 +55,13 @@
             <plugin>
                 <groupId>io.fabric8</groupId>
                 <artifactId>docker-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <showWarnings>true</showWarnings>
+                </configuration>
             </plugin>
         </plugins>
     </build>
