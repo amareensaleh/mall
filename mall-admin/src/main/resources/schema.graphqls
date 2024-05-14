@@ -1,0 +1,1349 @@
+type CmsPrefrenceArea {
+    id: Long
+    name: String
+    pic: [Byte]
+    showStatus: Int
+    sort: Int
+    subTitle: String
+}
+
+type CmsSubject {
+    albumPics: String
+    categoryId: Long
+    categoryName: String
+    collectCount: Int
+    commentCount: Int
+    content: String
+    createTime: Date
+    description: String
+    forwardCount: Int
+    id: Long
+    pic: String
+    productCount: Int
+    readCount: Int
+    recommendStatus: Int
+    showStatus: Int
+    title: String
+}
+
+type CommonPageOfCmsSubject {
+    list: [CmsSubject]
+    pageNum: Int
+    pageSize: Int
+    total: Long
+    totalPage: Int
+}
+
+type CommonPageOfOmsOrder {
+    list: [OmsOrder]
+    pageNum: Int
+    pageSize: Int
+    total: Long
+    totalPage: Int
+}
+
+type CommonPageOfOmsOrderReturnApply {
+    list: [OmsOrderReturnApply]
+    pageNum: Int
+    pageSize: Int
+    total: Long
+    totalPage: Int
+}
+
+type CommonPageOfOmsOrderReturnReason {
+    list: [OmsOrderReturnReason]
+    pageNum: Int
+    pageSize: Int
+    total: Long
+    totalPage: Int
+}
+
+type CommonPageOfPmsBrand {
+    list: [PmsBrand]
+    pageNum: Int
+    pageSize: Int
+    total: Long
+    totalPage: Int
+}
+
+type CommonPageOfPmsProduct {
+    list: [PmsProduct]
+    pageNum: Int
+    pageSize: Int
+    total: Long
+    totalPage: Int
+}
+
+type CommonPageOfPmsProductAttribute {
+    list: [PmsProductAttribute]
+    pageNum: Int
+    pageSize: Int
+    total: Long
+    totalPage: Int
+}
+
+type CommonPageOfPmsProductAttributeCategory {
+    list: [PmsProductAttributeCategory]
+    pageNum: Int
+    pageSize: Int
+    total: Long
+    totalPage: Int
+}
+
+type CommonPageOfPmsProductCategory {
+    list: [PmsProductCategory]
+    pageNum: Int
+    pageSize: Int
+    total: Long
+    totalPage: Int
+}
+
+type CommonPageOfSmsCoupon {
+    list: [SmsCoupon]
+    pageNum: Int
+    pageSize: Int
+    total: Long
+    totalPage: Int
+}
+
+type CommonPageOfSmsCouponHistory {
+    list: [SmsCouponHistory]
+    pageNum: Int
+    pageSize: Int
+    total: Long
+    totalPage: Int
+}
+
+type CommonPageOfSmsFlashPromotion {
+    list: [SmsFlashPromotion]
+    pageNum: Int
+    pageSize: Int
+    total: Long
+    totalPage: Int
+}
+
+type CommonPageOfSmsFlashPromotionProduct {
+    list: [SmsFlashPromotionProduct]
+    pageNum: Int
+    pageSize: Int
+    total: Long
+    totalPage: Int
+}
+
+type CommonPageOfSmsHomeAdvertise {
+    list: [SmsHomeAdvertise]
+    pageNum: Int
+    pageSize: Int
+    total: Long
+    totalPage: Int
+}
+
+type CommonPageOfSmsHomeBrand {
+    list: [SmsHomeBrand]
+    pageNum: Int
+    pageSize: Int
+    total: Long
+    totalPage: Int
+}
+
+type CommonPageOfSmsHomeNewProduct {
+    list: [SmsHomeNewProduct]
+    pageNum: Int
+    pageSize: Int
+    total: Long
+    totalPage: Int
+}
+
+type CommonPageOfSmsHomeRecommendProduct {
+    list: [SmsHomeRecommendProduct]
+    pageNum: Int
+    pageSize: Int
+    total: Long
+    totalPage: Int
+}
+
+type CommonPageOfSmsHomeRecommendSubject {
+    list: [SmsHomeRecommendSubject]
+    pageNum: Int
+    pageSize: Int
+    total: Long
+    totalPage: Int
+}
+
+type CommonPageOfUmsAdmin {
+    list: [UmsAdmin]
+    pageNum: Int
+    pageSize: Int
+    total: Long
+    totalPage: Int
+}
+
+type CommonPageOfUmsMenu {
+    list: [UmsMenu]
+    pageNum: Int
+    pageSize: Int
+    total: Long
+    totalPage: Int
+}
+
+type CommonPageOfUmsResource {
+    list: [UmsResource]
+    pageNum: Int
+    pageSize: Int
+    total: Long
+    totalPage: Int
+}
+
+type CommonPageOfUmsRole {
+    list: [UmsRole]
+    pageNum: Int
+    pageSize: Int
+    total: Long
+    totalPage: Int
+}
+
+type CommonResult {
+    code: Long
+    data: String
+    message: String
+}
+
+type CommonResultOfCommonPage {
+    code: Long
+    data: CommonPageOfUmsResource
+    message: String
+}
+
+type CommonResultOfList {
+    code: Long
+    data: [PmsProductCategoryWithChildrenItem]
+    message: String
+}
+
+type CommonResultOfOmsOrderDetail {
+    code: Long
+    data: OmsOrderDetail
+    message: String
+}
+
+type CommonResultOfOmsOrderReturnReason {
+    code: Long
+    data: OmsOrderReturnReason
+    message: String
+}
+
+type CommonResultOfOmsOrderSetting {
+    code: Long
+    data: OmsOrderSetting
+    message: String
+}
+
+type CommonResultOfOssCallbackResult {
+    code: Long
+    data: OssCallbackResult
+    message: String
+}
+
+type CommonResultOfOssPolicyResult {
+    code: Long
+    data: OssPolicyResult
+    message: String
+}
+
+type CommonResultOfPmsBrand {
+    code: Long
+    data: PmsBrand
+    message: String
+}
+
+type CommonResultOfPmsProductAttribute {
+    code: Long
+    data: PmsProductAttribute
+    message: String
+}
+
+type CommonResultOfPmsProductAttributeCategory {
+    code: Long
+    data: PmsProductAttributeCategory
+    message: String
+}
+
+type CommonResultOfPmsProductCategory {
+    code: Long
+    data: PmsProductCategory
+    message: String
+}
+
+type CommonResultOfPmsProductResult {
+    code: Long
+    data: PmsProductResult
+    message: String
+}
+
+type CommonResultOfSmsCouponParam {
+    code: Long
+    data: SmsCouponParam
+    message: String
+}
+
+type CommonResultOfSmsFlashPromotion {
+    code: Long
+    data: SmsFlashPromotion
+    message: String
+}
+
+type CommonResultOfSmsFlashPromotionProductRelation {
+    code: Long
+    data: SmsFlashPromotionProductRelation
+    message: String
+}
+
+type CommonResultOfSmsFlashPromotionSession {
+    code: Long
+    data: SmsFlashPromotionSession
+    message: String
+}
+
+type CommonResultOfSmsHomeAdvertise {
+    code: Long
+    data: SmsHomeAdvertise
+    message: String
+}
+
+type CommonResultOfUmsAdmin {
+    code: Long
+    data: UmsAdmin
+    message: String
+}
+
+type CommonResultOfUmsMenu {
+    code: Long
+    data: UmsMenu
+    message: String
+}
+
+type CommonResultOfUmsResource {
+    code: Long
+    data: UmsResource
+    message: String
+}
+
+type Mutation {
+    add(couponParam: SmsCouponParamInput): CommonResult
+    allocMenu(menuIds: [Long], roleId: Long): CommonResult
+    allocResource(resourceIds: [Long], roleId: Long): CommonResult
+    callback: CommonResultOfOssCallbackResult
+    close(ids: [Long], note: String): CommonResult
+    create(advertise: SmsHomeAdvertiseInput): CommonResult
+    create_1(umsMenu: UmsMenuInput): CommonResult
+    create_10(umsResourceCategory: UmsResourceCategoryInput): CommonResult
+    create_11(role: UmsRoleInput): CommonResult
+    create_12(homeNewProductList: [SmsHomeNewProductInput]): CommonResult
+    create_13(flashPromotion: SmsFlashPromotionInput): CommonResult
+    create_14(homeBrandList: [SmsHomeBrandInput]): CommonResult
+    create_15(homeRecommendProductList: [SmsHomeRecommendProductInput]): CommonResult
+    create_16(productAttributeParam: PmsProductAttributeParamInput): CommonResult
+    create_17(umsResource: UmsResourceInput): CommonResult
+    create_2(pmsBrand: PmsBrandParamInput): CommonResult
+    create_3(name: String): CommonResult
+    create_4(promotionSession: SmsFlashPromotionSessionInput): CommonResult
+    create_5(returnReason: OmsOrderReturnReasonInput): CommonResult
+    create_6(relationList: [SmsFlashPromotionProductRelationInput]): CommonResult
+    create_7(productCategoryParam: PmsProductCategoryParamInput): CommonResult
+    create_8(homeRecommendSubjectList: [SmsHomeRecommendSubjectInput]): CommonResult
+    create_9(productParam: PmsProductParamInput): CommonResult
+    delete(id: Long): CommonResult
+    deleteBatch(ids: [Long]): CommonResult
+    delete_1(ids: [Long]): CommonResult
+    delete_10(id: Long): CommonResult
+    delete_11(objectName: String): CommonResult
+    delete_12(ids: [Long]): CommonResult
+    delete_13(ids: [Long]): CommonResult
+    delete_14(ids: [Long]): CommonResult
+    delete_15(id: Long): CommonResult
+    delete_16(ids: [Long]): CommonResult
+    delete_17(id: Long): CommonResult
+    delete_18(id: Long): CommonResult
+    delete_19(ids: [Long]): CommonResult
+    delete_2(ids: [Long]): CommonResult
+    delete_3(ids: [Long]): CommonResult
+    delete_4(id: Long): CommonResult
+    delete_5(ids: [Long]): CommonResult
+    delete_6(id: Long): CommonResult
+    delete_7(id: Long): CommonResult
+    delete_8(ids: [Long]): CommonResult
+    delete_9(id: Long): CommonResult
+    delivery(deliveryParamList: [OmsOrderDeliveryParamInput]): CommonResult
+    login(umsAdminLoginParam: UmsAdminLoginParamInput): CommonResult
+    register(umsAdminParam: UmsAdminParamInput): CommonResultOfUmsAdmin
+    update(admin: UmsAdminInput, id: Long): CommonResult
+    updateDeleteStatus(deleteStatus: Int, ids: [Long]): CommonResult
+    updateFactoryStatus(factoryStatus: Int, ids: [Long]): CommonResult
+    updateHidden(hidden: Int, id: Long): CommonResult
+    updateNavStatus(ids: [Long], navStatus: Int): CommonResult
+    updateNewStatus(ids: [Long], newStatus: Int): CommonResult
+    updateNote(id: Long, note: String, status: Int): CommonResult
+    updatePassword(updatePasswordParam: UpdateAdminPasswordParamInput): CommonResult
+    updatePublishStatus(ids: [Long], publishStatus: Int): CommonResult
+    updateReceiverInfo(moneyInfoParam: OmsMoneyInfoParamInput): CommonResult
+    updateReceiverInfo_1(receiverInfoParam: OmsReceiverInfoParamInput): CommonResult
+    updateRecommendStatus(ids: [Long], recommendStatus: Int): CommonResult
+    updateRecommendStatus_1(ids: [Long], recommendStatus: Int): CommonResult
+    updateRecommendStatus_2(ids: [Long], recommendStatus: Int): CommonResult
+    updateRecommendStatus_3(ids: [Long], recommendStatus: Int): CommonResult
+    updateRecommendStatus_4(ids: [Long], recommendStatus: Int): CommonResult
+    updateRole(adminId: Long, roleIds: [Long]): CommonResult
+    updateShowStatus(ids: [Long], showStatus: Int): CommonResult
+    updateShowStatus_1(ids: [Long], showStatus: Int): CommonResult
+    updateSort(id: Long, sort: Int): CommonResult
+    updateSort_1(id: Long, sort: Int): CommonResult
+    updateSort_2(id: Long, sort: Int): CommonResult
+    updateSort_3(id: Long, sort: Int): CommonResult
+    updateStatus(id: Long, statusParam: OmsUpdateStatusParamInput): CommonResult
+    updateStatus_1(id: Long, status: Int): CommonResult
+    updateStatus_2(id: Long, status: Int): CommonResult
+    updateStatus_3(ids: [Long], status: Int): CommonResult
+    updateStatus_4(id: Long, status: Int): CommonResult
+    updateStatus_5(id: Long, status: Int): CommonResult
+    updateVerifyStatus(detail: String, ids: [Long], verifyStatus: Int): CommonResult
+    update_1(id: Long, name: String): CommonResult
+    update_10(id: Long, status: Int): CommonResult
+    update_11(id: Long, umsResource: UmsResourceInput): CommonResult
+    update_12(advertise: SmsHomeAdvertiseInput, id: Long): CommonResult
+    update_13(id: Long, productParam: PmsProductParamInput): CommonResult
+    update_14(id: Long, pmsBrandParam: PmsBrandParamInput): CommonResult
+    update_15(id: Long, umsMenu: UmsMenuInput): CommonResult
+    update_16(id: Long, role: UmsRoleInput): CommonResult
+    update_17(id: Long, returnReason: OmsOrderReturnReasonInput): CommonResult
+    update_18(id: Long, orderSetting: OmsOrderSettingInput): CommonResult
+    update_2(couponParam: SmsCouponParamInput, id: Long): CommonResult
+    update_3(id: Long, relation: SmsFlashPromotionProductRelationInput): CommonResult
+    update_4(pid: Long, skuStockList: [PmsSkuStockInput]): CommonResult
+    update_5(id: Long, productAttributeParam: PmsProductAttributeParamInput): CommonResult
+    update_6(id: Long, umsResourceCategory: UmsResourceCategoryInput): CommonResult
+    update_7(id: Long, productCategoryParam: PmsProductCategoryParamInput): CommonResult
+    update_8(flashPromotion: SmsFlashPromotionInput, id: Long): CommonResult
+    update_9(id: Long, promotionSession: SmsFlashPromotionSessionInput): CommonResult
+}
+
+type OmsCompanyAddress {
+    addressName: String
+    city: String
+    detailAddress: String
+    id: Long
+    name: String
+    phone: String
+    province: String
+    receiveStatus: Int
+    region: String
+    sendStatus: Int
+}
+
+type OmsOrder {
+    autoConfirmDay: Int
+    billContent: String
+    billHeader: String
+    billReceiverEmail: String
+    billReceiverPhone: String
+    billType: Int
+    commentTime: Date
+    confirmStatus: Int
+    couponAmount: BigDecimal
+    couponId: Long
+    createTime: Date
+    deleteStatus: Int
+    deliveryCompany: String
+    deliverySn: String
+    deliveryTime: Date
+    discountAmount: BigDecimal
+    freightAmount: BigDecimal
+    growth: Int
+    id: Long
+    integration: Int
+    integrationAmount: BigDecimal
+    memberId: Long
+    memberUsername: String
+    modifyTime: Date
+    note: String
+    orderSn: String
+    orderType: Int
+    payAmount: BigDecimal
+    payType: Int
+    paymentTime: Date
+    promotionAmount: BigDecimal
+    promotionInfo: String
+    receiveTime: Date
+    receiverCity: String
+    receiverDetailAddress: String
+    receiverName: String
+    receiverPhone: String
+    receiverPostCode: String
+    receiverProvince: String
+    receiverRegion: String
+    sourceType: Int
+    status: Int
+    totalAmount: BigDecimal
+    useIntegration: Int
+}
+
+type OmsOrderDetail {
+    historyList: [OmsOrderOperateHistory]
+    orderItemList: [OmsOrderItem]
+}
+
+type OmsOrderItem {
+    couponAmount: BigDecimal
+    giftGrowth: Int
+    giftIntegration: Int
+    id: Long
+    integrationAmount: BigDecimal
+    orderId: Long
+    orderSn: String
+    productAttr: String
+    productBrand: String
+    productCategoryId: Long
+    productId: Long
+    productName: String
+    productPic: String
+    productPrice: BigDecimal
+    productQuantity: Int
+    productSkuCode: String
+    productSkuId: Long
+    productSn: String
+    promotionAmount: BigDecimal
+    promotionName: String
+    realAmount: BigDecimal
+}
+
+type OmsOrderOperateHistory {
+    createTime: Date
+    id: Long
+    note: String
+    operateMan: String
+    orderId: Long
+    orderStatus: Int
+}
+
+type OmsOrderReturnApply {
+    companyAddressId: Long
+    createTime: Date
+    description: String
+    handleMan: String
+    handleNote: String
+    handleTime: Date
+    id: Long
+    memberUsername: String
+    orderId: Long
+    orderSn: String
+    productAttr: String
+    productBrand: String
+    productCount: Int
+    productId: Long
+    productName: String
+    productPic: String
+    productPrice: BigDecimal
+    productRealPrice: BigDecimal
+    proofPics: String
+    reason: String
+    receiveMan: String
+    receiveNote: String
+    receiveTime: Date
+    returnAmount: BigDecimal
+    returnName: String
+    returnPhone: String
+    status: Int
+}
+
+type OmsOrderReturnReason {
+    createTime: Date
+    id: Long
+    name: String
+    sort: Int
+    status: Int
+}
+
+type OmsOrderSetting {
+    commentOvertime: Int
+    confirmOvertime: Int
+    finishOvertime: Int
+    flashOrderOvertime: Int
+    id: Long
+    normalOrderOvertime: Int
+}
+
+type OssCallbackResult {
+    filename: String
+    height: String
+    mimeType: String
+    size: String
+    width: String
+}
+
+type OssPolicyResult {
+    accessKeyId: String
+    callback: String
+    dir: String
+    host: String
+    policy: String
+    signature: String
+}
+
+type PmsBrand {
+    bigPic: String
+    brandStory: String
+    factoryStatus: Int
+    firstLetter: String
+    id: Long
+    logo: String
+    name: String
+    productCommentCount: Int
+    productCount: Int
+    showStatus: Int
+    sort: Int
+}
+
+type PmsProduct {
+    albumPics: String
+    brandId: Long
+    brandName: String
+    deleteStatus: Int
+    description: String
+    detailDesc: String
+    detailHtml: String
+    detailMobileHtml: String
+    detailTitle: String
+    feightTemplateId: Long
+    giftGrowth: Int
+    giftPoint: Int
+    id: Long
+    keywords: String
+    lowStock: Int
+    name: String
+    newStatus: Int
+    note: String
+    originalPrice: BigDecimal
+    pic: String
+    previewStatus: Int
+    price: BigDecimal
+    productAttributeCategoryId: Long
+    productCategoryId: Long
+    productCategoryName: String
+    productSn: String
+    promotionEndTime: Date
+    promotionPerLimit: Int
+    promotionPrice: BigDecimal
+    promotionStartTime: Date
+    promotionType: Int
+    publishStatus: Int
+    recommandStatus: Int
+    sale: Int
+    serviceIds: String
+    sort: Int
+    stock: Int
+    subTitle: String
+    unit: String
+    usePointLimit: Int
+    verifyStatus: Int
+    weight: BigDecimal
+}
+
+type PmsProductAttribute {
+    filterType: Int
+    handAddStatus: Int
+    id: Long
+    inputList: String
+    inputType: Int
+    name: String
+    productAttributeCategoryId: Long
+    relatedStatus: Int
+    searchType: Int
+    selectType: Int
+    sort: Int
+    type: Int
+}
+
+type PmsProductAttributeCategory {
+    attributeCount: Int
+    id: Long
+    name: String
+    paramCount: Int
+}
+
+type PmsProductAttributeCategoryItem {
+    productAttributeList: [PmsProductAttribute]
+}
+
+type PmsProductCategory {
+    description: String
+    icon: String
+    id: Long
+    keywords: String
+    level: Int
+    name: String
+    navStatus: Int
+    parentId: Long
+    productCount: Int
+    productUnit: String
+    showStatus: Int
+    sort: Int
+}
+
+type PmsProductCategoryWithChildrenItem {
+    children: [PmsProductCategory]
+}
+
+type PmsProductResult {
+    cateParentId: Long
+}
+
+type PmsSkuStock {
+    id: Long
+    lockStock: Int
+    lowStock: Int
+    pic: String
+    price: BigDecimal
+    productId: Long
+    promotionPrice: BigDecimal
+    sale: Int
+    skuCode: String
+    spData: String
+    stock: Int
+}
+
+type ProductAttrInfo {
+    attributeCategoryId: Long
+    attributeId: Long
+}
+
+type Query {
+    delete(id: Long): CommonResult
+    delete_1(id: Long): CommonResult
+    detail(id: Long): CommonResultOfOmsOrderDetail
+    getAttrInfo(productCategoryId: Long): CommonResultOfList
+    getItem(id: Long): CommonResultOfSmsFlashPromotionProductRelation
+    getItem_1(id: Long): CommonResultOfSmsFlashPromotionSession
+    getItem_10(id: Long): CommonResultOfPmsProductAttribute
+    getItem_11(id: Long): CommonResultOfUmsAdmin
+    getItem_12(id: Long): CommonResult
+    getItem_13(id: Long): CommonResultOfSmsCouponParam
+    getItem_14(id: Long): CommonResultOfUmsResource
+    getItem_15(id: Long): CommonResultOfSmsHomeAdvertise
+    getItem_2(id: Long): CommonResultOfPmsProductAttributeCategory
+    getItem_3(id: Long): CommonResultOfPmsProductCategory
+    getItem_4(id: Long): CommonResultOfUmsMenu
+    getItem_5(keyword: String, pageNum: Int, pageSize: Int): CommonResultOfCommonPage
+    getItem_6(id: Long): CommonResultOfOmsOrderReturnReason
+    getItem_7(id: Long): CommonResultOfOmsOrderSetting
+    getItem_8(id: Long): CommonResultOfPmsBrand
+    getItem_9(id: Long): CommonResultOfSmsFlashPromotion
+    getList(keyword: String, pid: Long): CommonResultOfList
+    getListWithAttr: CommonResultOfList
+    getList_1(keyword: String): CommonResultOfList
+    getList_2(keyword: String, pageNum: Int, pageSize: Int, showStatus: Int): CommonResultOfCommonPage
+    getList_3(pageNum: Int, pageSize: Int): CommonResultOfCommonPage
+    getList_4(keyword: String, pageNum: Int, pageSize: Int): CommonResultOfCommonPage
+    getList_5(cid: Long, pageNum: Int, pageSize: Int, type: Int): CommonResultOfCommonPage
+    getList_6: CommonResultOfList
+    getList_7(pageNum: Int, pageSize: Int, parentId: Long): CommonResultOfCommonPage
+    getList_8(pageNum: Int, pageSize: Int, productQueryParam: PmsProductQueryParamInput): CommonResultOfCommonPage
+    getRoleList(adminId: Long): CommonResultOfList
+    getUpdateInfo(id: Long): CommonResultOfPmsProductResult
+    list(keyword: String, pageNum: Int, pageSize: Int): CommonResultOfCommonPage
+    listAll: CommonResultOfList
+    listAll_1: CommonResultOfList
+    listAll_2: CommonResultOfList
+    listAll_3: CommonResultOfList
+    listAll_4: CommonResultOfList
+    listMenu(roleId: Long): CommonResultOfList
+    listResource(roleId: Long): CommonResultOfList
+    listWithChildren: CommonResultOfList
+    list_1(couponId: Long, orderSn: String, pageNum: Int, pageSize: Int, useStatus: Int): CommonResultOfCommonPage
+    list_10(defaultStatus: Int): CommonResultOfList
+    list_11: CommonResultOfList
+    list_12: CommonResultOfList
+    list_13(endTime: String, name: String, pageNum: Int, pageSize: Int, type: Int): CommonResultOfCommonPage
+    list_14(keyword: String, pageNum: Int, pageSize: Int): CommonResultOfCommonPage
+    list_15(name: String, pageNum: Int, pageSize: Int, type: Int): CommonResultOfCommonPage
+    list_16(flashPromotionId: Long, flashPromotionSessionId: Long, pageNum: Int, pageSize: Int): CommonResultOfCommonPage
+    list_17(categoryId: Long, nameKeyword: String, pageNum: Int, pageSize: Int, urlKeyword: String): CommonResultOfCommonPage
+    list_2(pageNum: Int, pageSize: Int): CommonResultOfCommonPage
+    list_3(pageNum: Int, pageSize: Int, queryParam: OmsReturnApplyQueryParamInput): CommonResultOfCommonPage
+    list_4(pageNum: Int, pageSize: Int, recommendStatus: Int, subjectName: String): CommonResultOfCommonPage
+    list_5(pageNum: Int, pageSize: Int, parentId: Long): CommonResultOfCommonPage
+    list_6(pageNum: Int, pageSize: Int, productName: String, recommendStatus: Int): CommonResultOfCommonPage
+    list_7(pageNum: Int, pageSize: Int, productName: String, recommendStatus: Int): CommonResultOfCommonPage
+    list_8(pageNum: Int, pageSize: Int, queryParam: OmsOrderQueryParamInput): CommonResultOfCommonPage
+    list_9(brandName: String, pageNum: Int, pageSize: Int, recommendStatus: Int): CommonResultOfCommonPage
+    policy: CommonResultOfOssPolicyResult
+    refreshToken: CommonResult
+    selectList(flashPromotionId: Long): CommonResultOfList
+    treeList: CommonResultOfList
+}
+
+type SmsCoupon {
+    amount: BigDecimal
+    code: String
+    count: Int
+    enableTime: Date
+    endTime: Date
+    id: Long
+    memberLevel: Int
+    minPoint: BigDecimal
+    name: String
+    note: String
+    perLimit: Int
+    platform: Int
+    publishCount: Int
+    receiveCount: Int
+    startTime: Date
+    type: Int
+    useCount: Int
+    useType: Int
+}
+
+type SmsCouponHistory {
+    couponCode: String
+    couponId: Long
+    createTime: Date
+    getType: Int
+    id: Long
+    memberId: Long
+    memberNickname: String
+    orderId: Long
+    orderSn: String
+    useStatus: Int
+    useTime: Date
+}
+
+type SmsCouponParam {
+    productCategoryRelationList: [SmsCouponProductCategoryRelation]
+    productRelationList: [SmsCouponProductRelation]
+}
+
+type SmsCouponProductCategoryRelation {
+    couponId: Long
+    id: Long
+    parentCategoryName: String
+    productCategoryId: Long
+    productCategoryName: String
+}
+
+type SmsCouponProductRelation {
+    couponId: Long
+    id: Long
+    productId: Long
+    productName: String
+    productSn: String
+}
+
+type SmsFlashPromotion {
+    createTime: Date
+    endDate: Date
+    id: Long
+    startDate: Date
+    status: Int
+    title: String
+}
+
+type SmsFlashPromotionProduct {
+    product: PmsProduct
+}
+
+type SmsFlashPromotionProductRelation {
+    flashPromotionCount: Int
+    flashPromotionId: Long
+    flashPromotionLimit: Int
+    flashPromotionPrice: BigDecimal
+    flashPromotionSessionId: Long
+    id: Long
+    productId: Long
+    sort: Int
+}
+
+type SmsFlashPromotionSession {
+    createTime: Date
+    endTime: Date
+    id: Long
+    name: String
+    startTime: Date
+    status: Int
+}
+
+type SmsFlashPromotionSessionDetail {
+    productCount: Long
+}
+
+type SmsHomeAdvertise {
+    clickCount: Int
+    endTime: Date
+    id: Long
+    name: String
+    note: String
+    orderCount: Int
+    pic: String
+    sort: Int
+    startTime: Date
+    status: Int
+    type: Int
+    url: String
+}
+
+type SmsHomeBrand {
+    brandId: Long
+    brandName: String
+    id: Long
+    recommendStatus: Int
+    sort: Int
+}
+
+type SmsHomeNewProduct {
+    id: Long
+    productId: Long
+    productName: String
+    recommendStatus: Int
+    sort: Int
+}
+
+type SmsHomeRecommendProduct {
+    id: Long
+    productId: Long
+    productName: String
+    recommendStatus: Int
+    sort: Int
+}
+
+type SmsHomeRecommendSubject {
+    id: Long
+    recommendStatus: Int
+    sort: Int
+    subjectId: Long
+    subjectName: String
+}
+
+type UmsAdmin {
+    createTime: Date
+    email: String
+    icon: String
+    id: Long
+    loginTime: Date
+    nickName: String
+    note: String
+    password: String
+    status: Int
+    username: String
+}
+
+type UmsMemberLevel {
+    commentGrowthPoint: Int
+    defaultStatus: Int
+    freeFreightPoint: BigDecimal
+    growthPoint: Int
+    id: Long
+    name: String
+    note: String
+    priviledgeBirthday: Int
+    priviledgeComment: Int
+    priviledgeFreeFreight: Int
+    priviledgeMemberPrice: Int
+    priviledgePromotion: Int
+    priviledgeSignIn: Int
+}
+
+type UmsMenu {
+    createTime: Date
+    hidden: Int
+    icon: String
+    id: Long
+    level: Int
+    name: String
+    parentId: Long
+    sort: Int
+    title: String
+}
+
+type UmsMenuNode {
+    children: [UmsMenuNode]
+}
+
+type UmsResource {
+    categoryId: Long
+    createTime: Date
+    description: String
+    id: Long
+    name: String
+    url: String
+}
+
+type UmsResourceCategory {
+    createTime: Date
+    id: Long
+    name: String
+    sort: Int
+}
+
+type UmsRole {
+    adminCount: Int
+    createTime: Date
+    description: String
+    id: Long
+    name: String
+    sort: Int
+    status: Int
+}
+
+input CmsPrefrenceAreaProductRelationInput {
+    id: Long
+    prefrenceAreaId: Long
+    productId: Long
+}
+
+input CmsSubjectProductRelationInput {
+    id: Long
+    productId: Long
+    subjectId: Long
+}
+
+input OmsMoneyInfoParamInput {
+    discountAmount: BigDecimal
+    freightAmount: BigDecimal
+    orderId: Long
+    status: Int
+}
+
+input OmsOrderDeliveryParamInput {
+    deliveryCompany: String
+    deliverySn: String
+    orderId: Long
+}
+
+input OmsOrderQueryParamInput {
+    createTime: String
+    orderSn: String
+    orderType: Int
+    receiverKeyword: String
+    sourceType: Int
+    status: Int
+}
+
+input OmsOrderReturnReasonInput {
+    createTime: Date
+    id: Long
+    name: String
+    sort: Int
+    status: Int
+}
+
+input OmsOrderSettingInput {
+    commentOvertime: Int
+    confirmOvertime: Int
+    finishOvertime: Int
+    flashOrderOvertime: Int
+    id: Long
+    normalOrderOvertime: Int
+}
+
+input OmsReceiverInfoParamInput {
+    orderId: Long
+    receiverCity: String
+    receiverDetailAddress: String
+    receiverName: String
+    receiverPhone: String
+    receiverPostCode: String
+    receiverProvince: String
+    receiverRegion: String
+    status: Int
+}
+
+input OmsReturnApplyQueryParamInput {
+    createTime: String
+    handleMan: String
+    handleTime: String
+    id: Long
+    receiverKeyword: String
+    status: Int
+}
+
+input OmsUpdateStatusParamInput {
+    companyAddressId: Long
+    handleMan: String
+    handleNote: String
+    id: Long
+    receiveMan: String
+    receiveNote: String
+    returnAmount: BigDecimal
+    status: Int
+}
+
+input PmsBrandParamInput {
+    bigPic: String
+    brandStory: String
+    factoryStatus: Int
+    firstLetter: String
+    logo: String
+    name: String
+    showStatus: Int
+    sort: Int
+}
+
+input PmsMemberPriceInput {
+    id: Long
+    memberLevelId: Long
+    memberLevelName: String
+    memberPrice: BigDecimal
+    productId: Long
+}
+
+input PmsProductAttributeParamInput {
+    filterType: Int
+    handAddStatus: Int
+    inputList: String
+    inputType: Int
+    name: String
+    productAttributeCategoryId: Long
+    relatedStatus: Int
+    searchType: Int
+    selectType: Int
+    sort: Int
+    type: Int
+}
+
+input PmsProductAttributeValueInput {
+    id: Long
+    productAttributeId: Long
+    productId: Long
+    value: String
+}
+
+input PmsProductCategoryParamInput {
+    description: String
+    icon: String
+    keywords: String
+    name: String
+    navStatus: Int
+    parentId: Long
+    productAttributeIdList: [Long]
+    productUnit: String
+    showStatus: Int
+    sort: Int
+}
+
+input PmsProductFullReductionInput {
+    fullPrice: BigDecimal
+    id: Long
+    productId: Long
+    reducePrice: BigDecimal
+}
+
+input PmsProductLadderInput {
+    count: Int
+    discount: BigDecimal
+    id: Long
+    price: BigDecimal
+    productId: Long
+}
+
+input PmsProductParamInput {
+    memberPriceList: [PmsMemberPriceInput]
+    prefrenceAreaProductRelationList: [CmsPrefrenceAreaProductRelationInput]
+    productAttributeValueList: [PmsProductAttributeValueInput]
+    productFullReductionList: [PmsProductFullReductionInput]
+    productLadderList: [PmsProductLadderInput]
+    skuStockList: [PmsSkuStockInput]
+    subjectProductRelationList: [CmsSubjectProductRelationInput]
+}
+
+input PmsProductQueryParamInput {
+    brandId: Long
+    keyword: String
+    productCategoryId: Long
+    productSn: String
+    publishStatus: Int
+    verifyStatus: Int
+}
+
+input PmsSkuStockInput {
+    id: Long
+    lockStock: Int
+    lowStock: Int
+    pic: String
+    price: BigDecimal
+    productId: Long
+    promotionPrice: BigDecimal
+    sale: Int
+    skuCode: String
+    spData: String
+    stock: Int
+}
+
+input SmsCouponParamInput {
+    productCategoryRelationList: [SmsCouponProductCategoryRelationInput]
+    productRelationList: [SmsCouponProductRelationInput]
+}
+
+input SmsCouponProductCategoryRelationInput {
+    couponId: Long
+    id: Long
+    parentCategoryName: String
+    productCategoryId: Long
+    productCategoryName: String
+}
+
+input SmsCouponProductRelationInput {
+    couponId: Long
+    id: Long
+    productId: Long
+    productName: String
+    productSn: String
+}
+
+input SmsFlashPromotionInput {
+    createTime: Date
+    endDate: Date
+    id: Long
+    startDate: Date
+    status: Int
+    title: String
+}
+
+input SmsFlashPromotionProductRelationInput {
+    flashPromotionCount: Int
+    flashPromotionId: Long
+    flashPromotionLimit: Int
+    flashPromotionPrice: BigDecimal
+    flashPromotionSessionId: Long
+    id: Long
+    productId: Long
+    sort: Int
+}
+
+input SmsFlashPromotionSessionInput {
+    createTime: Date
+    endTime: Date
+    id: Long
+    name: String
+    startTime: Date
+    status: Int
+}
+
+input SmsHomeAdvertiseInput {
+    clickCount: Int
+    endTime: Date
+    id: Long
+    name: String
+    note: String
+    orderCount: Int
+    pic: String
+    sort: Int
+    startTime: Date
+    status: Int
+    type: Int
+    url: String
+}
+
+input SmsHomeBrandInput {
+    brandId: Long
+    brandName: String
+    id: Long
+    recommendStatus: Int
+    sort: Int
+}
+
+input SmsHomeNewProductInput {
+    id: Long
+    productId: Long
+    productName: String
+    recommendStatus: Int
+    sort: Int
+}
+
+input SmsHomeRecommendProductInput {
+    id: Long
+    productId: Long
+    productName: String
+    recommendStatus: Int
+    sort: Int
+}
+
+input SmsHomeRecommendSubjectInput {
+    id: Long
+    recommendStatus: Int
+    sort: Int
+    subjectId: Long
+    subjectName: String
+}
+
+input UmsAdminInput {
+    createTime: Date
+    email: String
+    icon: String
+    id: Long
+    loginTime: Date
+    nickName: String
+    note: String
+    password: String
+    status: Int
+    username: String
+}
+
+input UmsAdminLoginParamInput {
+    password: String
+    username: String
+}
+
+input UmsAdminParamInput {
+    email: String
+    icon: String
+    nickName: String
+    note: String
+    password: String
+    username: String
+}
+
+input UmsMenuInput {
+    createTime: Date
+    hidden: Int
+    icon: String
+    id: Long
+    level: Int
+    name: String
+    parentId: Long
+    sort: Int
+    title: String
+}
+
+input UmsResourceCategoryInput {
+    createTime: Date
+    id: Long
+    name: String
+    sort: Int
+}
+
+input UmsResourceInput {
+    categoryId: Long
+    createTime: Date
+    description: String
+    id: Long
+    name: String
+    url: String
+}
+
+input UmsRoleInput {
+    adminCount: Int
+    createTime: Date
+    description: String
+    id: Long
+    name: String
+    sort: Int
+    status: Int
+}
+
+input UpdateAdminPasswordParamInput {
+    newPassword: String
+    oldPassword: String
+    username: String
+}
+
+scalar Byte
+scalar Long
+scalar Date
+scalar BigDecimal
