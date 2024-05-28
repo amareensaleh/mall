@@ -28,7 +28,7 @@ public class SmsFlashPromotionSessionController {
     @ApiOperation("添加场次")
     @RequestMapping(value = "/create", method = RequestMethod.POST)
     @ResponseBody
-    public CommonResult create(@RequestBody SmsFlashPromotionSession promotionSession) {
+    public CommonResult<Integer> createSmsFlashPromotionSession(@RequestBody SmsFlashPromotionSession promotionSession) {
         int count = flashPromotionSessionService.create(promotionSession);
         if (count > 0) {
             return CommonResult.success(count);
@@ -39,7 +39,7 @@ public class SmsFlashPromotionSessionController {
     @ApiOperation("修改场次")
     @RequestMapping(value = "/update/{id}", method = RequestMethod.POST)
     @ResponseBody
-    public CommonResult update(@PathVariable Long id, @RequestBody SmsFlashPromotionSession promotionSession) {
+    public CommonResult<Integer> updateSmsFlashPromotionSession(@PathVariable Long id, @RequestBody SmsFlashPromotionSession promotionSession) {
         int count = flashPromotionSessionService.update(id, promotionSession);
         if (count > 0) {
             return CommonResult.success(count);
@@ -50,7 +50,7 @@ public class SmsFlashPromotionSessionController {
     @ApiOperation("修改启用状态")
     @RequestMapping(value = "/update/status/{id}", method = RequestMethod.POST)
     @ResponseBody
-    public CommonResult updateStatus(@PathVariable Long id, Integer status) {
+    public CommonResult<Integer> updateStatusFlashPromotion(@PathVariable Long id, Integer status) {
         int count = flashPromotionSessionService.updateStatus(id, status);
         if (count > 0) {
             return CommonResult.success(count);
@@ -61,7 +61,7 @@ public class SmsFlashPromotionSessionController {
     @ApiOperation("删除场次")
     @RequestMapping(value = "/delete/{id}", method = RequestMethod.POST)
     @ResponseBody
-    public CommonResult delete(@PathVariable Long id) {
+    public CommonResult<Integer> deleteFlashPromotions(@PathVariable Long id) {
         int count = flashPromotionSessionService.delete(id);
         if (count > 0) {
             return CommonResult.success(count);
@@ -72,7 +72,7 @@ public class SmsFlashPromotionSessionController {
     @ApiOperation("获取场次详情")
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     @ResponseBody
-    public CommonResult<SmsFlashPromotionSession> getItem(@PathVariable Long id) {
+    public CommonResult<SmsFlashPromotionSession> getItemSmsFlashPromotionSession(@PathVariable Long id) {
         SmsFlashPromotionSession promotionSession = flashPromotionSessionService.getItem(id);
         return CommonResult.success(promotionSession);
     }
@@ -80,7 +80,7 @@ public class SmsFlashPromotionSessionController {
     @ApiOperation("获取全部场次")
     @RequestMapping(value = "/list", method = RequestMethod.GET)
     @ResponseBody
-    public CommonResult<List<SmsFlashPromotionSession>> list() {
+    public CommonResult<List<SmsFlashPromotionSession>> listSmsFlashPromotionSession() {
         List<SmsFlashPromotionSession> promotionSessionList = flashPromotionSessionService.list();
         return CommonResult.success(promotionSessionList);
     }

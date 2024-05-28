@@ -28,7 +28,7 @@ public class SmsCouponController {
     @ApiOperation("添加优惠券")
     @RequestMapping(value = "/create", method = RequestMethod.POST)
     @ResponseBody
-    public CommonResult add(@RequestBody SmsCouponParam couponParam) {
+    public CommonResult<Integer> add(@RequestBody SmsCouponParam couponParam) {
         int count = couponService.create(couponParam);
         if(count>0){
             return CommonResult.success(count);
@@ -39,7 +39,7 @@ public class SmsCouponController {
     @ApiOperation("删除优惠券")
     @RequestMapping(value = "/delete/{id}", method = RequestMethod.POST)
     @ResponseBody
-    public CommonResult delete(@PathVariable Long id) {
+    public CommonResult<Integer> deleteCoupon(@PathVariable Long id) {
         int count = couponService.delete(id);
         if(count>0){
             return CommonResult.success(count);
@@ -50,7 +50,7 @@ public class SmsCouponController {
     @ApiOperation("修改优惠券")
     @RequestMapping(value = "/update/{id}", method = RequestMethod.POST)
     @ResponseBody
-    public CommonResult update(@PathVariable Long id,@RequestBody SmsCouponParam couponParam) {
+    public CommonResult<Integer> updateSmsCouponParam(@PathVariable Long id, @RequestBody SmsCouponParam couponParam) {
         int count = couponService.update(id,couponParam);
         if(count>0){
             return CommonResult.success(count);
@@ -61,7 +61,7 @@ public class SmsCouponController {
     @ApiOperation("根据优惠券名称和类型分页获取优惠券列表")
     @RequestMapping(value = "/list", method = RequestMethod.GET)
     @ResponseBody
-    public CommonResult<CommonPage<SmsCoupon>> list(
+    public CommonResult<CommonPage<SmsCoupon>> listSmsCoupon(
             @RequestParam(value = "name",required = false) String name,
             @RequestParam(value = "type",required = false) Integer type,
             @RequestParam(value = "pageSize", defaultValue = "5") Integer pageSize,
@@ -73,7 +73,7 @@ public class SmsCouponController {
     @ApiOperation("获取单个优惠券的详细信息")
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     @ResponseBody
-    public CommonResult<SmsCouponParam> getItem(@PathVariable Long id) {
+    public CommonResult<SmsCouponParam> getItemSmsCouponParam(@PathVariable Long id) {
         SmsCouponParam couponParam = couponService.getItem(id);
         return CommonResult.success(couponParam);
     }

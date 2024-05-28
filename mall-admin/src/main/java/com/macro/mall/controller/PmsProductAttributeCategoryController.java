@@ -29,7 +29,7 @@ public class PmsProductAttributeCategoryController {
     @ApiOperation("添加商品属性分类")
     @RequestMapping(value = "/create", method = RequestMethod.POST)
     @ResponseBody
-    public CommonResult create(@RequestParam String name) {
+    public CommonResult<Integer> createProductAttributeCategory(@RequestParam String name) {
         int count = productAttributeCategoryService.create(name);
         if (count > 0) {
             return CommonResult.success(count);
@@ -41,7 +41,7 @@ public class PmsProductAttributeCategoryController {
     @ApiOperation("修改商品属性分类")
     @RequestMapping(value = "/update/{id}", method = RequestMethod.POST)
     @ResponseBody
-    public CommonResult update(@PathVariable Long id, @RequestParam String name) {
+    public CommonResult<Integer> updateProductAttributeCategory(@PathVariable Long id, @RequestParam String name) {
         int count = productAttributeCategoryService.update(id, name);
         if (count > 0) {
             return CommonResult.success(count);
@@ -51,9 +51,9 @@ public class PmsProductAttributeCategoryController {
     }
 
     @ApiOperation("删除单个商品属性分类")
-    @RequestMapping(value = "/delete/{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "/delete/{id}", method = RequestMethod.DELETE)
     @ResponseBody
-    public CommonResult delete(@PathVariable Long id) {
+    public CommonResult<Integer> deleteProductAttributeCategory(@PathVariable Long id) {
         int count = productAttributeCategoryService.delete(id);
         if (count > 0) {
             return CommonResult.success(count);
@@ -65,7 +65,7 @@ public class PmsProductAttributeCategoryController {
     @ApiOperation("获取单个商品属性分类信息")
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     @ResponseBody
-    public CommonResult<PmsProductAttributeCategory> getItem(@PathVariable Long id) {
+    public CommonResult<PmsProductAttributeCategory> getItemPmsProductAttributeCategory(@PathVariable Long id) {
         PmsProductAttributeCategory productAttributeCategory = productAttributeCategoryService.getItem(id);
         return CommonResult.success(productAttributeCategory);
     }
@@ -73,7 +73,7 @@ public class PmsProductAttributeCategoryController {
     @ApiOperation("分页获取所有商品属性分类")
     @RequestMapping(value = "/list", method = RequestMethod.GET)
     @ResponseBody
-    public CommonResult<CommonPage<PmsProductAttributeCategory>> getList(@RequestParam(defaultValue = "5") Integer pageSize, @RequestParam(defaultValue = "1") Integer pageNum) {
+    public CommonResult<CommonPage<PmsProductAttributeCategory>> getListPmsProductAttributeCategory(@RequestParam(defaultValue = "5") Integer pageSize, @RequestParam(defaultValue = "1") Integer pageNum) {
         List<PmsProductAttributeCategory> productAttributeCategoryList = productAttributeCategoryService.getList(pageSize, pageNum);
         return CommonResult.success(CommonPage.restPage(productAttributeCategoryList));
     }

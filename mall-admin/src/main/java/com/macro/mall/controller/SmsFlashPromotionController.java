@@ -28,7 +28,7 @@ public class SmsFlashPromotionController {
     @ApiOperation("添加活动")
     @RequestMapping(value = "/create", method = RequestMethod.POST)
     @ResponseBody
-    public CommonResult create(@RequestBody SmsFlashPromotion flashPromotion) {
+    public CommonResult<Integer> createSmsFlashPromotion(@RequestBody SmsFlashPromotion flashPromotion) {
         int count = flashPromotionService.create(flashPromotion);
         if (count > 0) {
             return CommonResult.success(count);
@@ -39,7 +39,7 @@ public class SmsFlashPromotionController {
     @ApiOperation("编辑活动")
     @RequestMapping(value = "/update/{id}", method = RequestMethod.POST)
     @ResponseBody
-    public CommonResult update(@PathVariable Long id, @RequestBody SmsFlashPromotion flashPromotion) {
+    public CommonResult<Integer> updateSmsFlashPromotion(@PathVariable Long id, @RequestBody SmsFlashPromotion flashPromotion) {
         int count = flashPromotionService.update(id, flashPromotion);
         if (count > 0) {
             return CommonResult.success(count);
@@ -50,7 +50,7 @@ public class SmsFlashPromotionController {
     @ApiOperation("删除活动")
     @RequestMapping(value = "/delete/{id}", method = RequestMethod.POST)
     @ResponseBody
-    public CommonResult delete(@PathVariable Long id) {
+    public CommonResult<Integer> deleteFlashPromotion(@PathVariable Long id) {
         int count = flashPromotionService.delete(id);
         if (count > 0) {
             return CommonResult.success(count);
@@ -61,7 +61,7 @@ public class SmsFlashPromotionController {
     @ApiOperation("修改上下线状态")
     @RequestMapping(value = "/update/status/{id}", method = RequestMethod.POST)
     @ResponseBody
-    public CommonResult update(@PathVariable Long id, Integer status) {
+    public CommonResult<Integer> update(@PathVariable Long id, Integer status) {
         int count = flashPromotionService.updateStatus(id, status);
         if (count > 0) {
             return CommonResult.success(count);
@@ -80,9 +80,9 @@ public class SmsFlashPromotionController {
     @ApiOperation("根据活动名称分页查询")
     @RequestMapping(value = "/list", method = RequestMethod.GET)
     @ResponseBody
-    public CommonResult<CommonPage<SmsFlashPromotion>> getItem(@RequestParam(value = "keyword", required = false) String keyword,
-                          @RequestParam(value = "pageSize", defaultValue = "5") Integer pageSize,
-                          @RequestParam(value = "pageNum", defaultValue = "1") Integer pageNum) {
+    public CommonResult<CommonPage<SmsFlashPromotion>> getItemSmsFlashPromotions(@RequestParam(value = "keyword", required = false) String keyword,
+                                                                                 @RequestParam(value = "pageSize", defaultValue = "5") Integer pageSize,
+                                                                                 @RequestParam(value = "pageNum", defaultValue = "1") Integer pageNum) {
         List<SmsFlashPromotion> flashPromotionList = flashPromotionService.list(keyword, pageSize, pageNum);
         return CommonResult.success(CommonPage.restPage(flashPromotionList));
     }
